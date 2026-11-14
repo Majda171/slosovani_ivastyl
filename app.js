@@ -95,6 +95,7 @@ function currentElapsed(){if(DEMO)return demoStart===null?-1:Date.now()-demoStar
 function phaseFromElapsed(ms){if(ms<0)return 'waiting';if(ms<1600)return 'girlIntro';if(ms<8500)return 'girlSpin';if(ms<10200)return 'girlDrop';if(ms<15200)return 'girlWin';if(ms<17200)return 'boyIntro';if(ms<23900)return 'boySpin';if(ms<25600)return 'boyDrop';if(ms<30800)return 'boyWin';return 'final'}
 function announcement(str){$('announcement-text').textContent=str}
 function phaseChange(p){
+  if(window.ivaSoundPhase) window.ivaSoundPhase(p);
   phase=p;
   root.classList.remove('phase-girl','phase-boy','phase-spinning','phase-ball-out','phase-winner','phase-final');
   $('winner-panel').hidden=true;$('final-panel').hidden=true;$('picked-ball').style.opacity='';

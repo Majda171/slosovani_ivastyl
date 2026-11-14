@@ -1,0 +1,65 @@
+
+/* Modern minimalist stage refresh: larger glass raffle drum and the TWO real side-view garment photos. */
+:root { --rasp:#bc346d; --rasp-dark:#9c2457; }
+.site-frame{min-height:100svh}
+.header{max-width:1720px;padding-inline:clamp(20px,4.2vw,72px)}
+.main{max-width:1720px;width:100%;padding:18px clamp(20px,4.2vw,72px) 17px;gap:8px;justify-content:space-between}
+.intro{padding-top:4px}
+.stage{grid-template-columns:minmax(180px,.72fr) minmax(570px,3fr) minmax(180px,.72fr);gap:clamp(0px,1vw,18px);min-height:550px;max-height:760px;flex:1;align-items:center}
+.main-display{height:clamp(530px,70vh,740px);min-height:530px;overflow:visible}
+.machine-area{inset:auto;left:50%;top:52%;margin:0;width:min(100%,800px,calc(70vh * 1.115));height:auto;max-width:none;max-height:none;aspect-ratio:950/852;transform:translate(-50%,-50%);transition:opacity .55s ease,transform .55s ease}
+.machine-image{width:100%;height:100%;object-fit:fill}
+.balls-chamber{width:61%;height:65%;top:43%;left:50%;max-width:none}
+.ball{width:clamp(28px,2.3vw,40px);height:clamp(28px,2.3vw,40px);font-size:clamp(10px,1vw,13px)}
+.prize-visual{height:clamp(320px,34vw,490px);width:100%;}
+.prize img{max-height:100%;max-width:100%;object-fit:contain}
+.prize-visual:before{width:min(100%,300px)}
+.prize-pill{font-size:11px}
+.announcement{font-size:12px;top:10px;z-index:14}
+.stage-subline{bottom:0}
+.phase-winner .machine-area,.phase-final .machine-area{transform:translate(-50%,-50%) scale(.88)}
+.phase-ball-out .picked-ball{transform:translate(-50%,-100%) scale(1.1)}
+.sound-button{border:1px solid #ecdce3;background:#fff;color:#1d1b1d;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:750;display:flex;gap:8px;align-items:center;white-space:nowrap;transition:background .2s,border-color .2s}
+.sound-button:hover,.sound-button[aria-pressed="true"]{background:#fff2f7;border-color:#ddaac0;color:var(--rasp-dark)}
+.sound-button #sound-icon{font-size:16px;color:var(--rasp)}
+/* The upper part fills the screen on larger displays; footer stays below rather than overlapping. */
+@media(min-width:1101px) and (min-height:950px){.site-frame{height:100svh}.stage{min-height:560px;max-height:none}.main-display{height:min(72vh,750px)}.prize-visual{height:clamp(345px,34vw,535px)}}
+@media(max-width:1200px) and (min-width:701px){
+ .stage{grid-template-columns:minmax(142px,.85fr) minmax(360px,2.4fr) minmax(142px,.85fr);min-height:470px}
+ .main-display{height:clamp(440px,60vh,620px);min-height:440px}
+ .prize-visual{height:clamp(250px,29vw,360px)}
+ .announcement{top:0}
+}
+@media(max-width:700px){
+ .main{padding:15px 13px 17px;gap:14px;justify-content:start}
+ .header{height:66px;padding:8px 14px}
+ .header-right{gap:9px}
+ .sound-button{padding:7px 9px;font-size:10px}
+ .sound-button #sound-label{display:none}
+ .live-chip{font-size:8px}
+ .intro{gap:10px;padding-top:0}
+ .stage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(385px,auto) auto;gap:3px 4px;min-height:0;max-height:none;flex:0}
+ .main-display{grid-column:1/-1;grid-row:1;height:clamp(385px,105vw,520px);min-height:385px;overflow:visible}
+ .machine-area{inset:auto;top:54%;left:50%;width:min(100vw,500px);max-width:none;max-height:none;height:auto;transform:translate(-50%,-50%)}
+ .balls-chamber{width:60%;height:65%;top:43%}
+ .announcement{top:2px;max-width:95%;font-size:10px;z-index:14}
+ .ball{width:clamp(26px,8vw,36px);height:clamp(26px,8vw,36px);font-size:11px}
+ .prize{grid-row:2}
+ .prize-visual{height:clamp(158px,44vw,245px)}
+ .prize img{max-width:230px}
+ .prize-pill{padding:7px 8px;font-size:8px}
+ .prize p{font-size:10px}
+ .picked-ball{width:95px;height:95px;font-size:40px}
+ .winner-panel{inset:24px 0 5px}
+ .final-panel{inset:19px 0 0;padding:0 8px}
+ .engage-row{padding:12px 4px 2px}
+}
+@media(max-width:390px){
+ .sound-button{padding:6px 8px}
+ .live-chip{display:none}
+ .stage{grid-template-rows:minmax(345px,auto) auto}
+ .main-display{height:clamp(345px,106vw,410px);min-height:345px}
+ .machine-area{width:100vw}
+ .prize-visual{height:clamp(139px,40vw,165px)}
+ .ball{width:25px;height:25px;font-size:9px}
+}

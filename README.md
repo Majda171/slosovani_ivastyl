@@ -86,3 +86,12 @@ Zvuky **zatím nejsou přidány**, jak bylo domluveno pro další úpravu. Autom
 - Před spuštěním živého losování proveď test režimu `?demo=1` a ujisti se, že `participants.json` skutečně obsahuje seznam.
 
 Made by MadlaArt · https://madlaart.cz/
+
+
+## Novinky: větší osudí, bokové fotografie, zvuky
+- Osudí je ve středu výrazně větší, boční fotografie skutečných setů jsou na stranách.
+- Zvuk zapne návštěvník vpravo nahoře. Fallback losovacích míčků a fanfáry je již napsaný ve WebAudio.
+- Pro Pixabay hudbu přidej do `assets/audio/` soubor `background.mp3`; pro realistické zvuky také `draw.mp3` a `fanfare.mp3`.
+- Na Pixabay: https://pixabay.com/music/corporate-smooth-presentation-194342/ , https://pixabay.com/sound-effects/film-special-effects-lotto-ball-105088/ , https://pixabay.com/sound-effects/film-special-effects-tada-fanfare-356032/ .
+- Kvůli pravidlům prohlížeče hudba začne až po stisknutí tlačítka Zapnout zvuk.
+- 7:30 byla TESTOVACÍ verze, pro opakování otevři `?demo=1`. Finální předvyhlášení si nech v samostatné verzi (18.11.2026, 18:00).

@@ -13,13 +13,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="polish.css">
+  <script src="audio.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <div class="site-frame" id="site-frame">
     <header class="header">
       <a href="https://www.ivastyl.cz/" target="_blank" rel="noopener noreferrer" class="brand" aria-label="IvaStyl – přejít na e-shop"><img src="assets/logo-ivastyl.png" alt="IvaStyl"></a>
-      <div class="header-right"><span class="live-chip"><span class="live-dot"></span> TEST LOSOVÁNÍ IVASTYL</span><a class="header-shop" href="https://www.ivastyl.cz/" target="_blank" rel="noopener noreferrer">E-shop <span aria-hidden="true">↗</span></a></div>
+      <div class="header-right"><button class="sound-button" id="sound-button" type="button" aria-pressed="false" title="Zapnout zvuky losování"><span id="sound-icon" aria-hidden="true">♪</span> <span id="sound-label">Zapnout zvuk</span></button><span class="live-chip"><span class="live-dot"></span> TEST LOSOVÁNÍ IVASTYL</span><a class="header-shop" href="https://www.ivastyl.cz/" target="_blank" rel="noopener noreferrer">E-shop <span aria-hidden="true">↗</span></a></div>
     </header>
 
     <main class="main" id="main">
@@ -41,13 +43,13 @@
 
       <section class="stage" id="stage" aria-label="Soutěž a losovací osudí">
         <article class="prize prize-girl">
-          <div class="prize-visual"><img src="assets/set-sovicky.webp" alt="Dívčí set čepice a nákrčníku se sovičkami na figuríně"></div>
+          <div class="prize-visual"><img src="assets/set-sovicky-bok.webp" alt="Dívčí set čepice a nákrčníku se sovičkami na figuríně"></div>
           <span class="prize-pill"><span class="prize-bullet pink"></span> PRO HOLČIČKU</span>
           <p>Set se sovičkami</p>
         </article>
 
         <div class="main-display">
-          <div class="announcement" id="announcement" role="status" aria-live="polite"><span class="announcement-dot"></span><span id="announcement-text">Naše osudí už čeká na soutěžící</span></div>
+          <div class="announcement" id="announcement" role="status" aria-live="polite"><span class="announcement-dot"></span><span id="announcement-text">Osudí je připravené</span></div>
           <div class="machine-area" id="machine-area">
             <img class="machine-image" id="machine-image" src="assets/osudi.webp" alt="Průhledné malinové losovací osudí">
             <div class="balls-chamber" id="balls-chamber" aria-hidden="true"></div>
@@ -78,7 +80,7 @@
         </div>
 
         <article class="prize prize-boy">
-          <div class="prize-visual"><img src="assets/set-fotbal.webp" alt="Chlapecký set čepice a nákrčníku s fotbalovým potiskem na figuríně"></div>
+          <div class="prize-visual"><img src="assets/set-fotbal-bok.webp" alt="Chlapecký set čepice a nákrčníku s fotbalovým potiskem na figuríně"></div>
           <span class="prize-pill"><span class="prize-bullet blue"></span> PRO KLUKA</span>
           <p>Fotbalový set</p>
         </article>

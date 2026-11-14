@@ -1,0 +1,3 @@
+Sem vloz zvuky stazene z Pixabay: background.mp3 (hudba), draw.mp3 (losovani), fanfare.mp3 (fanfara).
+Aplikace jiz umi vlastni syntetizovane zvuky kdyz soubory chybi.
+Hudba se spousti az po kliknuti na zapnuti zvuku (omezeni webovych prohlizecu).
