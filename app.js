@@ -1,6 +1,6 @@
 'use strict';
-// TEST ONLY: Saturday 14.11.2026 09:30 Europe/Prague (CET = UTC+1)
-const DRAW_AT=Date.parse('2026-11-14T08:30:00Z');
+// TEST ONLY: Saturday 14.11.2026 09:50 Europe/Prague (CET = UTC+1)
+const DRAW_AT=Date.parse('2026-11-14T08:50:00Z');
 const DEMO=new URLSearchParams(location.search).get('demo')==='1';
 const $=id=>document.getElementById(id);
 const root=$('site-frame');
@@ -106,7 +106,7 @@ function phaseChange(p){
     $('countdown').hidden=false;
     $('stage-subline').hidden=false;
     announcement('Naše osudí už čeká na soutěžící');
-    $('stage-subline').textContent='✳  TEST: losování se automaticky spustí 14. 11. v 9:30  ✳';
+    $('stage-subline').textContent='✳  TEST: losování se automaticky spustí 14. 11. v 9:50  ✳';
   }else{
     $('countdown').hidden=true;
     switch(p){
