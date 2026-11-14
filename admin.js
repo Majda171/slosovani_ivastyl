@@ -1,6 +1,6 @@
 'use strict';
 const $=id=>document.getElementById(id);
-const KEYS=['shopUrl','discountCode','facebookPostUrl','instagramPostUrl','madlaartInstagram','madlaartFacebook'];
+const KEYS=['shopUrl','discountCode','facebookPostUrl','instagramPostUrl','madlaartInstagram','madlaartFacebook','supabaseUrl','supabaseAnonKey'];
 function saveDraft(){try{for(const id of ['girls','boys',...KEYS])localStorage.setItem('iva-admin-'+id,$(id).value)}catch{}}
 function rows(str){return str.split(/\r?\n/).map(t=>t.trim()).filter(Boolean)}
 function parse(){
@@ -30,7 +30,7 @@ function previewText(){const {list,errors}=parse();for(const [group,id] of [['gi
   el.style.color='#24734d';el.textContent=`Připraveno: ${list.girls.length} pro holčičku, ${list.boys.length} pro kluka. Každý má vlastní číslo.`;return true;
 }
 function download(name,obj){const content=JSON.stringify(obj,null,2)+'\n';const url=URL.createObjectURL(new Blob([content],{type:'application/json;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-function entries(){const list=parse().list;return {drawSeed:'IVASTYL-TEST-14-11-2026-0730',...list}}
+function entries(){const list=parse().list;return {drawSeed:'IVASTYL-TEST-14-11-2026-0900',...list}}
 function downloadParticipants(){if(!previewText()){alert('Zkontroluj seznam soutěžících.');return}download('participants.json',entries())}
 function downloadSettings(){const data={};for(const id of KEYS)data[id]=$(id).value.trim();download('settings.json',data)}
 function preview(){if(!previewText()){alert('Nejprve doplň soutěžící do obou skupin.');return}localStorage.setItem('ivastyl-preview-data',JSON.stringify(entries()));window.open('index.html?demo=1&source=admin','_blank','noopener')}

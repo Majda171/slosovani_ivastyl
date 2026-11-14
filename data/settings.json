@@ -4,5 +4,7 @@
   "facebookPostUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid02eaPkTZrTyudEaTWY8Zx2som1cDLxRhDJLYRth7cG7Z6SZvCaEXymR8UZ1EfAzFMLl&id=61574177012385",
   "instagramPostUrl": "https://www.instagram.com/p/DfkEKnRm2GC/",
   "madlaartInstagram": "",
-  "madlaartFacebook": ""
+  "madlaartFacebook": "",
+  "supabaseUrl": "https://dztajrgfbvqagzkuacft.supabase.co",
+  "supabaseAnonKey": "sb_publishable_h1iT-wyGx8hGTZWqz9ORSQ_YzyOl01w"
 }

@@ -1,6 +1,6 @@
 'use strict';
-// TEST ONLY: Saturday 14.11.2026 07:30 Europe/Prague (CET = UTC+1)
-const DRAW_AT=Date.parse('2026-11-14T06:30:00Z');
+// TEST ONLY: Saturday 14.11.2026 09:00 Europe/Prague (CET = UTC+1)
+const DRAW_AT=Date.parse('2026-11-14T08:00:00Z');
 const DEMO=new URLSearchParams(location.search).get('demo')==='1';
 const $=id=>document.getElementById(id);
 const root=$('site-frame');
@@ -105,7 +105,7 @@ function phaseChange(p){
   if(p==='waiting'){
     $('countdown').hidden=false;
     announcement('Naše osudí už čeká na soutěžící');
-    $('stage-subline').textContent='✳  TEST: losování se automaticky spustí 14. 11. v 7:30  ✳';
+    $('stage-subline').textContent='✳  TEST: losování se automaticky spustí 14. 11. v 9:00  ✳';
   }else{
     $('countdown').hidden=true;
     switch(p){
@@ -176,15 +176,13 @@ async function loadSettings(){
   ]){
     const u=validLink(settings[field],domains);if(u){$(id).href=u;$(id).hidden=false}
   }
-  if(!$('facebook-post-link').hidden||!$('instagram-post-link').hidden)$('comment-hint').textContent='Komentář se zveřejní až po vložení pod příspěvek na Facebooku nebo Instagramu.';
+  
 }
 async function copyValue(text,button,done){
   try{await navigator.clipboard.writeText(text);button.dataset.prev=button.textContent;button.textContent=done;setTimeout(()=>button.textContent=button.dataset.prev||'Kopírovat',1800)}
   catch{window.prompt('Zkopíruj text:',text)}
 }
 function setupInteractions(){
-  $('comment-toggle').addEventListener('click',()=>{const panel=$('comments-panel');panel.hidden=!panel.hidden;$('comment-toggle').setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden)$('comment-text').focus()});
-  $('copy-comment').addEventListener('click',()=>copyValue($('comment-text').value,$('copy-comment'),'Zkopírováno ✓'));
   $('copy-code').addEventListener('click',()=>copyValue($('discount-code').textContent,$('copy-code'),'✓'));
   if(DEMO){
     $('demo-controls').hidden=false;
