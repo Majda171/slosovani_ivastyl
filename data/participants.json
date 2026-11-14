@@ -1,247 +1,47 @@
 {
-  "drawSeed": "IVASTYL-TEST-14-11-2026-0930",
+  "drawSeed": "IVASTYL-LOSOVANI-18-11-2026-1800",
   "girls": [
     {
       "number": "1",
-      "name": "Anna Novotná"
+      "name": "Testovací Jana"
     },
     {
       "number": "2",
-      "name": "Jakub Dvořák"
+      "name": "Testovací Klára"
     },
     {
       "number": "3",
-      "name": "Tereza Svobodová"
+      "name": "Testovací Lenka"
     },
     {
       "number": "4",
-      "name": "Martin Procházka"
+      "name": "Testovací Aneta"
     },
     {
       "number": "5",
-      "name": "Eliška Černá"
-    },
-    {
-      "number": "6",
-      "name": "Tomáš Veselý"
-    },
-    {
-      "number": "7",
-      "name": "Kateřina Horáková"
-    },
-    {
-      "number": "8",
-      "name": "David Němec"
-    },
-    {
-      "number": "9",
-      "name": "Lucie Pokorná"
-    },
-    {
-      "number": "10",
-      "name": "Ondřej Marek"
-    },
-    {
-      "number": "11",
-      "name": "Michaela Králová"
-    },
-    {
-      "number": "12",
-      "name": "Filip Beneš"
-    },
-    {
-      "number": "13",
-      "name": "Veronika Kučerová"
-    },
-    {
-      "number": "14",
-      "name": "Adam Fiala"
-    },
-    {
-      "number": "15",
-      "name": "Barbora Malá"
-    },
-    {
-      "number": "16",
-      "name": "Patrik Holub"
-    },
-    {
-      "number": "17",
-      "name": "Nikola Konečná"
-    },
-    {
-      "number": "18",
-      "name": "Daniel Urban"
-    },
-    {
-      "number": "19",
-      "name": "Kristýna Šimková"
-    },
-    {
-      "number": "20",
-      "name": "Matěj Blažek"
-    },
-    {
-      "number": "21",
-      "name": "Karolína Růžičková"
-    },
-    {
-      "number": "22",
-      "name": "Lukáš Sedláček"
-    },
-    {
-      "number": "23",
-      "name": "Natálie Jelínková"
-    },
-    {
-      "number": "24",
-      "name": "Štěpán Novák"
-    },
-    {
-      "number": "25",
-      "name": "Adéla Pospíšilová"
-    },
-    {
-      "number": "26",
-      "name": "Vojtěch Kadlec"
-    },
-    {
-      "number": "27",
-      "name": "Simona Bartošová"
-    },
-    {
-      "number": "28",
-      "name": "Dominik Tichý"
-    },
-    {
-      "number": "29",
-      "name": "Gabriela Machová"
-    },
-    {
-      "number": "30",
-      "name": "Samuel Hájek"
+      "name": "Testovací Petra"
     }
   ],
   "boys": [
     {
-      "number": "31",
-      "name": "31. Petra Hrušková"
+      "number": "6",
+      "name": "Testovací Tomáš"
     },
     {
-      "number": "32",
-      "name": "32. Jan Valenta"
+      "number": "7",
+      "name": "Testovací Matěj"
     },
     {
-      "number": "33",
-      "name": "33. Monika Šťastná"
+      "number": "8",
+      "name": "Testovací Filip"
     },
     {
-      "number": "34",
-      "name": "34. Richard Zeman"
+      "number": "9",
+      "name": "Testovací Adam"
     },
     {
-      "number": "35",
-      "name": "35. Klára Beránková"
-    },
-    {
-      "number": "36",
-      "name": "36. Marek Sýkora"
-    },
-    {
-      "number": "37",
-      "name": "37. Andrea Křížová"
-    },
-    {
-      "number": "38",
-      "name": "38. Michal Švec"
-    },
-    {
-      "number": "39",
-      "name": "39. Denisa Vacková"
-    },
-    {
-      "number": "40",
-      "name": "40. Pavel Soukup"
-    },
-    {
-      "number": "41",
-      "name": "41. Laura Havelková"
-    },
-    {
-      "number": "42",
-      "name": "42. Radek Čermák"
-    },
-    {
-      "number": "43",
-      "name": "43. Sabina Doležalová"
-    },
-    {
-      "number": "44",
-      "name": "44. Jiří Matoušek"
-    },
-    {
-      "number": "45",
-      "name": "45. Nela Vaňková"
-    },
-    {
-      "number": "46",
-      "name": "46. Aleš Kovář"
-    },
-    {
-      "number": "47",
-      "name": "47. Iveta Čížková"
-    },
-    {
-      "number": "48",
-      "name": "48. Kryštof Toman"
-    },
-    {
-      "number": "49",
-      "name": "49. Sofie Bednářová"
-    },
-    {
-      "number": "50",
-      "name": "50. Roman Vlk"
-    },
-    {
-      "number": "51",
-      "name": "51. Aneta Vlčková"
-    },
-    {
-      "number": "52",
-      "name": "52. Erik Bureš"
-    },
-    {
-      "number": "53",
-      "name": "53. Zuzana Šindelářová"
-    },
-    {
-      "number": "54",
-      "name": "54. Šimon Hrdlička"
-    },
-    {
-      "number": "55",
-      "name": "55. Linda Kolářová"
-    },
-    {
-      "number": "56",
-      "name": "56. Viktor Janda"
-    },
-    {
-      "number": "57",
-      "name": "57. Pavlína Musilová"
-    },
-    {
-      "number": "58",
-      "name": "58. Robin Hrubý"
-    },
-    {
-      "number": "59",
-      "name": "59. Beáta Kopecká"
-    },
-    {
-      "number": "60",
-      "name": "60. Marcel Šafránek"
+      "number": "10",
+      "name": "Testovací Jakub"
     }
   ]
 }

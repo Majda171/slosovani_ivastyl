@@ -1,6 +1,6 @@
 'use strict';
-// TEST ONLY: Saturday 14.11.2026 09:50 Europe/Prague (CET = UTC+1)
-const DRAW_AT=Date.parse('2026-11-14T08:50:00Z');
+// Ostré losování: středa 18.11.2026 18:00 Europe/Prague (CET = UTC+1)
+const DRAW_AT=Date.parse('2026-11-18T17:00:00Z');
 const DEMO=new URLSearchParams(location.search).get('demo')==='1';
 const $=id=>document.getElementById(id);
 const root=$('site-frame');
@@ -105,8 +105,8 @@ function phaseChange(p){
   if(p==='waiting'){
     $('countdown').hidden=false;
     $('stage-subline').hidden=false;
-    announcement('Naše osudí už čeká na soutěžící');
-    $('stage-subline').textContent='✳  TEST: losování se automaticky spustí 14. 11. v 9:50  ✳';
+    announcement('Losování začne 18. 11. 2026 v 18:00');
+    $('stage-subline').textContent='✳  LOSOVÁNÍ SE SPUSTÍ AUTOMATICKY 18. 11. V 18:00  ✳';
   }else{
     $('countdown').hidden=true;
     switch(p){
