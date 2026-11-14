@@ -1,4 +1,4 @@
-/* Public congratulations, clean e-commerce look */
+/* Public comments, clean e-commerce look */
 .guestbook{max-width:900px;width:100%;margin:24px auto 0;padding:27px clamp(16px,3vw,36px);border-radius:22px;border:1px solid #f0eced;background:#fff;box-shadow:0 12px 45px rgba(31,19,24,.028)}
 .guestbook-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:20px}
 .guestbook-heading h2{font-size:clamp(23px,3vw,34px);letter-spacing:-.045em;margin:8px 0 6px;font-weight:800}
@@ -29,3 +29,7 @@
 /* The first hero keeps 100svh as a minimum; the guestbook continues below the fold. */
 .site-frame{height:auto!important;min-height:100svh}
 .footer-brand img{object-fit:contain}
+
+/* Revised: generic public comment section */
+.guestbook-heading h2{margin-top:0}
+.guestbook-form textarea{min-height:94px}

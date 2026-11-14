@@ -1,6 +1,6 @@
 'use strict';
-// TEST ONLY: Saturday 14.11.2026 09:00 Europe/Prague (CET = UTC+1)
-const DRAW_AT=Date.parse('2026-11-14T08:00:00Z');
+// TEST ONLY: Saturday 14.11.2026 09:30 Europe/Prague (CET = UTC+1)
+const DRAW_AT=Date.parse('2026-11-14T08:30:00Z');
 const DEMO=new URLSearchParams(location.search).get('demo')==='1';
 const $=id=>document.getElementById(id);
 const root=$('site-frame');
@@ -91,7 +91,7 @@ function animateBalls(ts){
   }
   rafId=requestAnimationFrame(animateBalls);
 }
-function currentElapsed(){if(DEMO)return demoStart===null?-1:Date.now()-demoStart;return Date.now()-DRAW_AT}
+function currentElapsed(){if(DEMO){return demoStart===null ? -Math.max(60000,DRAW_AT-Date.now()) : Date.now()-demoStart;}return Date.now()-DRAW_AT}
 function phaseFromElapsed(ms){if(ms<0)return 'waiting';if(ms<1600)return 'girlIntro';if(ms<8500)return 'girlSpin';if(ms<10200)return 'girlDrop';if(ms<15200)return 'girlWin';if(ms<17200)return 'boyIntro';if(ms<23900)return 'boySpin';if(ms<25600)return 'boyDrop';if(ms<30800)return 'boyWin';return 'final'}
 function announcement(str){$('announcement-text').textContent=str}
 function phaseChange(p){
@@ -104,8 +104,9 @@ function phaseChange(p){
   if(group!==currentGroup)buildBalls(group);
   if(p==='waiting'){
     $('countdown').hidden=false;
+    $('stage-subline').hidden=false;
     announcement('Naše osudí už čeká na soutěžící');
-    $('stage-subline').textContent='✳  TEST: losování se automaticky spustí 14. 11. v 9:00  ✳';
+    $('stage-subline').textContent='✳  TEST: losování se automaticky spustí 14. 11. v 9:30  ✳';
   }else{
     $('countdown').hidden=true;
     switch(p){
@@ -141,21 +142,39 @@ function displayFinal(){
   }
   $('stage-subline').hidden=true;
 }
+let finalCountdownShown='';
+function syncFinalCountdown(remainingMs){
+  const overlay=$('final-count-overlay'),num=$('final-count-num');
+  if(!overlay||!num)return;
+  const sec=Math.ceil(remainingMs/1000);
+  // Never obscure the sound prompt. Last three seconds before automatic draw only.
+  const show=remainingMs>0&&remainingMs<=3000&&!DEMO&&valid;
+  overlay.hidden=!show;
+  if(show&&String(sec)!==finalCountdownShown){
+    finalCountdownShown=String(sec);num.textContent=String(sec);
+    num.style.animation='none';void num.offsetWidth;num.style.animation='';
+  }
+  if(!show)finalCountdownShown='';
+}
 function updateClock(){
+  // Always update the full days/hours/minutes/seconds countdown, even while roster data loads.
+  const ms=currentElapsed();
+  syncFinalCountdown(-ms);
+  if(ms<0){$('countdown').hidden=false;updateCountdown(-ms);}
   if(!loaded)return;
-  const ms=currentElapsed();const newPhase=phaseFromElapsed(ms);
+  const newPhase=phaseFromElapsed(ms);
   if(!valid){
     $('data-alert').hidden=false;
     if(newPhase==='waiting')phase='';
-    if(ms>=0){announcement('Losování čeká na doplnění soutěžících');$('countdown').hidden=true}
-    else updateCountdown(-ms);
+    if(ms>=0){announcement('Losování čeká na doplnění soutěžících');$('countdown').hidden=true;}
+    else{$('countdown').hidden=false;updateCountdown(-ms);}
     return;
   }
   if(newPhase!==phase)phaseChange(newPhase);
   if(newPhase==='waiting')updateCountdown(-ms);
 }
 function updateCountdown(ms){
-  const n=Math.max(0,Math.floor(ms/1000));
+  const n=Math.max(0,Math.ceil(ms/1000));
   $('dd').textContent=TWO(Math.floor(n/86400));
   $('hh').textContent=TWO(Math.floor(n%86400/3600));
   $('mm').textContent=TWO(Math.floor(n%3600/60));
@@ -192,9 +211,12 @@ function setupInteractions(){
   }
 }
 async function init(){
+  // Show all four countdown units from the very first render, not only just before the drawing.
+  $('countdown').hidden=false;
+  updateCountdown(Math.max(0,DRAW_AT-Date.now()));
   setupInteractions();
   await Promise.all([loadData(),loadSettings()]);
-  if(DEMO)announcement('Ukázka animace. Klikni na „Přehrát losování“.');
+  if(DEMO)announcement('Ukázkový režim: pro opakování klikni na Přehrát losování.');
   updateClock();
   setInterval(updateClock,200);
   // A frozen roster is required before draw. Reload it once shortly before start.

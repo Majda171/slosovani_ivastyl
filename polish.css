@@ -63,3 +63,35 @@
  .prize-visual{height:clamp(139px,40vw,165px)}
  .ball{width:25px;height:25px;font-size:9px}
 }
+
+/* Exact original logos supplied by the client */
+.brand{width:clamp(155px,14vw,210px);flex-shrink:0}
+.brand img{display:block;width:100%;height:auto;max-height:66px;object-fit:contain;object-position:left center}
+.footer-brand a{width:120px;height:58px}
+.footer-brand img{width:100%;height:100%;object-fit:contain}
+@media(max-width:700px){.brand{width:127px}.brand img{max-height:52px}.footer-brand a{width:112px;height:50px}}
+
+.privacy-note{max-width:920px;margin:12px auto 30px;padding:13px 18px;background:#fff;border:1px solid #eee5e9;border-radius:14px;color:#4a4a4a;font-size:12px;line-height:1.6;}
+.privacy-note summary{cursor:pointer;font-size:12px;font-weight:650;color:#782b4d;}
+.privacy-note p{margin:10px 0;} .privacy-note a{color:#9d2f5d;text-decoration:underline;}
+
+/* Zvuková úvodní výzva + dramatický závěr odpočtu */
+.sound-onboarding{position:fixed;inset:0;z-index:9998;background:rgba(20,20,24,.48);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:grid;place-items:center;padding:24px;}
+.sound-onboarding[hidden]{display:none!important}
+.sound-onboarding-card{width:min(100%,430px);background:#fff;border-radius:24px;padding:40px 34px 28px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.17);color:#19191b;}
+.sound-onboarding-symbol{margin:auto auto 13px;display:grid;place-items:center;width:66px;height:66px;border-radius:50%;background:#fbeaf0;color:#9e375e;font-size:34px}
+.sound-onboarding-eyebrow{font-size:10px;font-weight:800;letter-spacing:2.1px;color:#9b3d5f;margin:0 0 16px}
+.sound-onboarding-card h2{margin:0 0 10px;font-family:Manrope,Arial,sans-serif;font-size:clamp(26px,6vw,35px);font-weight:800;letter-spacing:-.06em}
+.sound-onboarding-card h2 span{color:#af3a68}
+.sound-onboarding-card p#sound-onboarding-desc{font-size:14px;line-height:1.7;color:#6c6870;margin:0 auto 25px;max-width:340px}
+.sound-onboarding-primary{display:block;width:100%;border:0;border-radius:13px;padding:16px;font:800 14px Manrope,Arial,sans-serif;background:#9d345f;color:white;cursor:pointer}
+.sound-onboarding-primary:hover{background:#83264e}
+.sound-onboarding-secondary{display:block;margin:15px auto 0;padding:8px 15px;border:0;background:transparent;color:#73666c;font:600 12px Manrope,Arial,sans-serif;cursor:pointer}
+.sound-onboarding-secondary:hover{text-decoration:underline}
+.final-count-overlay{position:fixed;inset:0;z-index:5000;background:rgba(255,255,255,.93);display:flex;align-items:center;justify-content:center;flex-direction:column;pointer-events:none;gap:18px}
+.final-count-overlay[hidden]{display:none!important}
+.final-count-label{font-family:Manrope,Arial,sans-serif;font-size:clamp(12px,2.1vw,16px);font-weight:800;letter-spacing:.22em;color:#8e365b}
+.final-count-num{font-family:Manrope,Arial,sans-serif;color:#101115;line-height:1;font-size:clamp(145px,24vw,330px);font-weight:800;letter-spacing:-.08em;animation:countPop .6s both}
+@keyframes countPop{from{transform:scale(.82);opacity:.3}to{transform:scale(1);opacity:1}}
+@media(max-width:560px){.sound-onboarding-card{padding:30px 22px 22px;border-radius:22px}.final-count-overlay{gap:12px}}
+@media(prefers-reduced-motion:reduce){.final-count-num{animation:none}}

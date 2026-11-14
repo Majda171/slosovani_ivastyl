@@ -26,6 +26,7 @@
    play(tracks.background);
    if(phaseSpin(lastPhase))play(tracks.draw);
  }
+ window.ivaEnableSound=()=>setSound(true);
  window.ivaSoundPhase=p=>{
    if(p===lastPhase)return;lastPhase=p;
    if(!enabled)return;

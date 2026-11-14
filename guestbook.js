@@ -1,4 +1,4 @@
-/* IvaStyl – public congratulations via Supabase REST (requires user project).
+/* IvaStyl – public comments via Supabase REST (requires user project).
    In ?demo=1 mode, local draft testing only in this browser. */
 (()=>{
  'use strict';
@@ -12,7 +12,7 @@
  const note=(s,type='')=>{status.textContent=s;status.dataset.type=type};
  function render(rows){
    posts.replaceChildren();$('guestbook-count').textContent=rows.length+' KOMENTÁŘŮ';
-   if(!rows.length){const p=document.createElement('p');p.className='guestbook-empty';p.textContent='Zatím žádná gratulace. Buď první!';posts.appendChild(p);return}
+   if(!rows.length){const p=document.createElement('p');p.className='guestbook-empty';p.textContent='Zatím žádné komentáře. Buď první!';posts.appendChild(p);return}
    for(const row of rows){
      const article=document.createElement('article');article.className='guestbook-entry';
      const head=document.createElement('div');head.className='guestbook-entry-head';
@@ -55,7 +55,7 @@
   e.preventDefault();if(busy)return;
   const name=$('guestbook-name').value.trim(),message=$('guestbook-message').value.trim();
   if($('guestbook-trap').value)return;
-  if(name.length<2||name.length>55||message.length<2||message.length>500){note('Zkontroluj jméno a délku vzkazu.','error');return}
+  if(name.length<2||name.length>55||message.length<2||message.length>500){note('Zkontroluj jméno a délku komentáře.','error');return}
   if(Date.now()-lastSubmit<12000){note('Mezi komentáři nech alespoň 12 sekund.','error');return}
   busy=true;lastSubmit=Date.now();$('guestbook-submit').disabled=true;note('Odesílám komentář…');
   try{
