@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="IvaStyl · slavnostní losování dvou ručně šitých dětských setů, 14. 11. 2026 v 7:30 (TEST).">
+  <meta property="og:title" content="IvaStyl – Velké losování">
+  <meta property="og:description" content="Dva dětské sety. Dva šťastní výherci. Přijď se podívat na losování!">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <title>IvaStyl · TEST losování 7:30</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="site-frame" id="site-frame">
+    <header class="header">
+      <a href="https://www.ivastyl.cz/" target="_blank" rel="noopener noreferrer" class="brand" aria-label="IvaStyl – přejít na e-shop"><img src="assets/logo-ivastyl.png" alt="IvaStyl"></a>
+      <div class="header-right"><span class="live-chip"><span class="live-dot"></span> TEST LOSOVÁNÍ IVASTYL</span><a class="header-shop" href="https://www.ivastyl.cz/" target="_blank" rel="noopener noreferrer">E-shop <span aria-hidden="true">↗</span></a></div>
+    </header>
+
+    <main class="main" id="main">
+      <div class="intro">
+        <div class="intro-text"><span class="eyebrow">VELKÉ LOSOVÁNÍ · 14. 11. 2026 V 7:30 · TEST</span><h1>O dva dětské sety<span class="accent">.</span></h1><p>Jedny sovičky, jeden fotbalový set a dva šťastní výherci. Kdo si odnese ručně šitou radost od IvaStyl?</p></div>
+        <section class="countdown" id="countdown" aria-label="Odpočet do losování">
+          <span class="count-label" id="count-label">DO LOSOVÁNÍ ZBÝVÁ</span>
+          <div class="count-parts" role="timer" aria-live="off">
+            <div class="count-piece"><strong id="dd">00</strong><span>DNY</span></div>
+            <span class="count-colon">:</span>
+            <div class="count-piece"><strong id="hh">00</strong><span>HOD</span></div>
+            <span class="count-colon">:</span>
+            <div class="count-piece"><strong id="mm">00</strong><span>MIN</span></div>
+            <span class="count-colon">:</span>
+            <div class="count-piece"><strong id="ss">00</strong><span>SEK</span></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="stage" id="stage" aria-label="Soutěž a losovací osudí">
+        <article class="prize prize-girl">
+          <div class="prize-visual"><img src="assets/set-sovicky.webp" alt="Dívčí set čepice a nákrčníku se sovičkami na figuríně"></div>
+          <span class="prize-pill"><span class="prize-bullet pink"></span> PRO HOLČIČKU</span>
+          <p>Set se sovičkami</p>
+        </article>
+
+        <div class="main-display">
+          <div class="announcement" id="announcement" role="status" aria-live="polite"><span class="announcement-dot"></span><span id="announcement-text">Naše osudí už čeká na soutěžící</span></div>
+          <div class="machine-area" id="machine-area">
+            <img class="machine-image" id="machine-image" src="assets/osudi.webp" alt="Průhledné malinové losovací osudí">
+            <div class="balls-chamber" id="balls-chamber" aria-hidden="true"></div>
+            <div class="picked-ball" id="picked-ball" aria-hidden="true"><span id="picked-number">?</span></div>
+            <div class="machine-vignette" aria-hidden="true"></div>
+            <div class="draw-pulse" aria-hidden="true"></div>
+          </div>
+          <div class="winner-panel" id="winner-panel" hidden aria-live="polite">
+            <span class="winner-kicker" id="winner-kicker">VÝHERNÍ ČÍSLO PRO HOLČIČKU</span>
+            <div class="winner-num" id="winner-num">—</div>
+            <h2 id="winner-name">Gratulujeme!</h2>
+            <p id="winner-message">Srdečně gratulujeme k výhře.</p>
+          </div>
+          <div class="final-panel" id="final-panel" hidden>
+            <div class="final-confetti" aria-hidden="true">✦</div>
+            <span class="eyebrow">ZNÁME OBA VÝHERCE</span>
+            <h2>Gratulujeme! <span class="accent">♥</span></h2>
+            <div class="result-pair">
+              <div class="result-person"><span>SET PRO HOLČIČKU</span><strong id="final-girl-name">—</strong><small>Výherní číslo <b id="final-girl-num">—</b></small></div>
+              <div class="result-person"><span>SET PRO KLUKA</span><strong id="final-boy-name">—</strong><small>Výherní číslo <b id="final-boy-num">—</b></small></div>
+            </div>
+            <p class="thank-caption">Děkujeme všem, kteří se zapojili. Máme malou radost i pro vás ostatní.</p>
+            <div class="discount"><div><small>VÁŠ SLEVOVÝ KÓD</small><strong id="discount-code">SOUTEZ10</strong></div><button type="button" id="copy-code" aria-label="Kopírovat slevový kód" title="Kopírovat slevový kód"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button></div>
+            <a class="shop-button" id="final-shop" href="https://www.ivastyl.cz/" target="_blank" rel="noopener noreferrer">Nakoupit na IvaStyl <span>↗</span></a>
+          </div>
+          <div class="stage-subline" id="stage-subline"><span class="tiny-spark">✳</span> Testovací losování se spustí automaticky v 7:30 <span class="tiny-spark">✳</span></div>
+          <div class="data-alert" id="data-alert" hidden>Nebyli zatím nahráni soutěžící. Losování čeká na seznam účastníků.</div>
+        </div>
+
+        <article class="prize prize-boy">
+          <div class="prize-visual"><img src="assets/set-fotbal.webp" alt="Chlapecký set čepice a nákrčníku s fotbalovým potiskem na figuríně"></div>
+          <span class="prize-pill"><span class="prize-bullet blue"></span> PRO KLUKA</span>
+          <p>Fotbalový set</p>
+        </article>
+      </section>
+
+      <div class="engage-row" id="engage-row">
+        <div class="participants-line" id="participants-line">Losování ze všech platných soutěžních čísel</div>
+        <button class="comment-toggle" type="button" id="comment-toggle" aria-expanded="false" aria-controls="comments-panel">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.6 8.6 0 0 1-7.7 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.6a8.4 8.4 0 0 1-.9-3.8 8.6 8.6 0 0 1 4.7-7.7 8.4 8.4 0 0 1 3.8-.9h.5a8.6 8.6 0 0 1 8 8v.5Z"/></svg>
+          Přidat komentář <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+      <div class="comments-panel" id="comments-panel" hidden>
+        <div><h2>Chceš nám něco vzkázat?</h2><p>Komentáře patří k soutěžním příspěvkům na Facebooku a Instagramu. Napiš si vzkaz a vlož ho tam, kde soutěžíš.</p></div>
+        <label for="comment-text">Tvůj komentář</label>
+        <textarea id="comment-text" rows="3" placeholder="Držím všem palce! ❤️"></textarea>
+        <div class="comments-actions"><button type="button" id="copy-comment" class="comment-copy">Zkopírovat komentář</button><a id="facebook-post-link" href="#" hidden target="_blank" rel="noopener noreferrer">Otevřít Facebook ↗</a><a id="instagram-post-link" href="#" hidden target="_blank" rel="noopener noreferrer">Otevřít Instagram ↗</a></div>
+        <small id="comment-hint">Komentáře se neukládají na této stránce; zveřejni je přímo pod soutěžním příspěvkem.</small>
+      </div>
+
+      <div id="demo-controls" class="demo-controls" hidden><span class="demo-badge">UKÁZKA – NEPLATNÉ LOSOVÁNÍ</span><button type="button" id="demo-play">Přehrát losování ▶</button><button type="button" id="demo-restart">Znovu ↺</button></div>
+    </main>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span>MADE BY</span><a href="https://madlaart.cz/" rel="noopener noreferrer" target="_blank" aria-label="MadlaArt – web grafického studia"><img src="assets/logo-madlaart.png" alt="MadlaArt"></a></div>
+      <div class="footer-copy"><strong>Chceš podobné losování i pro svou soutěž?</strong><p>Ráda pro tebe připravím originální soutěžní stránku na míru.</p></div>
+      <div class="footer-links"><a href="https://madlaart.cz/" rel="noopener noreferrer" target="_blank">Web ↗</a><a id="madla-instagram" href="#" hidden rel="noopener noreferrer" target="_blank">Instagram ↗</a><a id="madla-facebook" href="#" hidden rel="noopener noreferrer" target="_blank">Facebook ↗</a></div>
+    </div>
+  </footer>
+</body>
+</html>

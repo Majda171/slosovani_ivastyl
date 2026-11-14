@@ -1,0 +1,47 @@
+{
+  "drawSeed": "IVASTYL-TEST-14-11-2026-0730",
+  "girls": [
+    {
+      "number": "1",
+      "name": "Testovací Jana"
+    },
+    {
+      "number": "2",
+      "name": "Testovací Klára"
+    },
+    {
+      "number": "3",
+      "name": "Testovací Lenka"
+    },
+    {
+      "number": "4",
+      "name": "Testovací Aneta"
+    },
+    {
+      "number": "5",
+      "name": "Testovací Petra"
+    }
+  ],
+  "boys": [
+    {
+      "number": "6",
+      "name": "Testovací Tomáš"
+    },
+    {
+      "number": "7",
+      "name": "Testovací Matěj"
+    },
+    {
+      "number": "8",
+      "name": "Testovací Filip"
+    },
+    {
+      "number": "9",
+      "name": "Testovací Adam"
+    },
+    {
+      "number": "10",
+      "name": "Testovací Jakub"
+    }
+  ]
+}

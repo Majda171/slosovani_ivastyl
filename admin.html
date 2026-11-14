@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>IvaStyl · Příprava losování</title>
+<link rel="stylesheet" href="admin.css"><script src="admin.js" defer></script>
+</head>
+<body>
+<header class="admin-header"><a href="index.html">← Zpět na stránku</a><div class="title-brand">IvaStyl <span>SPRÁVA SOUTĚŽE</span></div><a href="index.html?demo=1" target="_blank">Otevřít ukázku ↗</a></header>
+<main>
+<section class="admin-hero"><div class="tag">PRO POŘADATELKU</div><h1>TEST · Připravit seznam<br><span>výherních čísel.</span></h1><p>Sem vlož soutěžící. Každý má vlastní číslo a zobrazované jméno. Tyto údaje se po losování ukážou na veřejné stránce.</p></section>
+<div class="warning"><strong>Důležité:</strong> Tato stránka je pomocník, nikoliv chráněná administrace. Úpravy si nejprve stáhneš jako JSON a pak vložíš do GitHubu. Na veřejnou stránku nedávej e-maily, adresy ani jiná soukromá data.</div>
+<div class="editor-grid">
+<section class="entry-panel"><div class="panel-head"><span class="group-dot girl"></span><div><span class="sub">01 / SOVIČKY</span><h2>Set pro holčičku</h2></div><div class="count" id="girl-count">0 osob</div></div><label for="girls">Každý soutěžící na samostatný řádek</label><textarea spellcheck="false" id="girls" rows="12" placeholder="1; Jana K.&#10;2; @lenka&#10;3; Aneta&#10;nebo jen jméno – číslo se doplní automaticky">1; Testovací Jana
+2; Testovací Klára
+3; Testovací Lenka
+4; Testovací Aneta
+5; Testovací Petra</textarea></section>
+<section class="entry-panel"><div class="panel-head"><span class="group-dot boy"></span><div><span class="sub">02 / FOTBAL</span><h2>Set pro kluka</h2></div><div class="count" id="boy-count">0 osob</div></div><label for="boys">Každý soutěžící na samostatný řádek</label><textarea spellcheck="false" id="boys" rows="12" placeholder="4; Matěj&#10;5; @martina&#10;6; Radek&#10;nebo jen jméno – číslo se doplní automaticky">6; Testovací Tomáš
+7; Testovací Matěj
+8; Testovací Filip
+9; Testovací Adam
+10; Testovací Jakub</textarea></section>
+</div>
+<p class="input-guide">Formát: <code>číslo; jméno</code> (např. <code>27; Jana K.</code>). Můžeš také vložit jen jméno — pořadí čísel se doplní automaticky. Veřejná stránka nemá přístup k přímým komentářům z Facebooku ani Instagramu.</p>
+<div id="feedback" class="feedback" role="status">Doplň soutěžící pro oba sety.</div>
+<div class="actions"><button id="download" class="primary" type="button">Stáhnout participants.json ↓</button><button id="preview" type="button">Vyzkoušet s těmito jmény ↗</button><label class="file-button">Načíst starší seznam <input type="file" id="import" accept=".json,application/json" hidden></label></div>
+<section class="settings"><h2>Odkazy a slevový kód</h2><p>Vyplň odkazy na konkrétní soutěžní příspěvky. Díky nim lze na stránce použít tlačítko „Přidat komentář“.</p><div class="setting-grid"><label>E-shop<input id="shopUrl" value="https://www.ivastyl.cz/" type="url"></label><label>Slevový kód<input id="discountCode" value="SOUTEZ10"></label><label>Soutěžní příspěvek Facebook<input id="facebookPostUrl" type="url" value="https://www.facebook.com/permalink.php?story_fbid=pfbid02eaPkTZrTyudEaTWY8Zx2som1cDLxRhDJLYRth7cG7Z6SZvCaEXymR8UZ1EfAzFMLl&amp;id=61574177012385" placeholder="https://www.facebook.com/…"></label><label>Soutěžní příspěvek Instagram<input id="instagramPostUrl" type="url" value="https://www.instagram.com/p/DfkEKnRm2GC/" placeholder="https://www.instagram.com/p/…"></label><label>MadlaArt Instagram<input id="madlaartInstagram" type="url" placeholder="https://www.instagram.com/…"></label><label>MadlaArt Facebook<input id="madlaartFacebook" type="url" placeholder="https://www.facebook.com/…"></label></div><button id="settings-download" type="button" class="secondary">Stáhnout settings.json ↓</button></section>
+<section class="instructions"><h2>Jak nahrát aktualizaci na GitHub</h2><ol><li>Nahraď ukázková jména vlastními fiktivními, potom stáhni <code>participants.json</code>.</li><li>Vlož stažený soubor do složky <code>data/</code> v GitHub repozitáři a potvrď změnu.</li><li>Stejně stáhni <code>settings.json</code> a nahraď soubor ve složce <code>data/</code>.</li><li><strong>Pro test nejpozději před 14. 11. v 7:30</strong> uzavři a zkontroluj seznam; po začátku losování jej už neměň.</li><li>Na stránce <code>index.html?demo=1</code> spustíš ukázkovou animaci s testovacími jmény. Tlačítko „Vyzkoušet s těmito jmény“ použije aktuálně vyplněný seznam pouze ve tvém prohlížeči.</li></ol></section>
+</main>
+<footer>Vyrobeno pro IvaStyl · Made by MadlaArt</footer>
+</body></html>
